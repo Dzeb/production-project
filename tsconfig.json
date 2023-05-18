@@ -11,7 +11,8 @@
     // как с обычными пакетами испольлзуя import, (import вместо requared(''))
     "esModuleInterop": true,
     // Автоматически создвает default exports для либ которые их не используют
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "."
   },
   "ts-node": {
     "compilerOptions": {
