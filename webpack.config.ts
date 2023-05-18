@@ -1,6 +1,7 @@
 import path from "path";
 import webpack from "webpack";
 import HTMLWebpackPlugin from "html-webpack-plugin";
+import { buildPlaguns } from "./config/build/buildPlugins";
 
 const config: webpack.Configuration = {
   mode: "development",
@@ -10,12 +11,7 @@ const config: webpack.Configuration = {
     filename: "[name].[contenthash].js",
     clean: true,
   },
-  plugins: [
-    new HTMLWebpackPlugin({
-      template: path.resolve(__dirname, "public", "index.html"),
-    }),
-    new webpack.ProgressPlugin(),
-  ],
+  plugins: buildPlaguns(),
   module: {
     rules: [
       {
