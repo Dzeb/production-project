@@ -12,7 +12,10 @@
     "esModuleInterop": true,
     // Автоматически создвает default exports для либ которые их не используют
     "allowSyntheticDefaultImports": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    }
   },
   "ts-node": {
     "compilerOptions": {
