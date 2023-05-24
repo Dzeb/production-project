@@ -1,4 +1,4 @@
-import { Children, FC, useMemo, useState } from "react";
+import { FC, useMemo, useState } from "react";
 import {
   LOCAL_STORAGE_THEME_KEY,
   Theme,
