@@ -19,7 +19,7 @@ export function buildWebpackConfig(
       filename: "[name].[contenthash].js",
       clean: true,
     },
-    plugins: buildPlugins(paths),
+    plugins: buildPlugins(options),
     module: {
       rules: buildLoaders(options),
     },
