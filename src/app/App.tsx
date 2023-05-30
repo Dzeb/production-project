@@ -5,13 +5,6 @@ import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/Navbar";
 import { Sidebar } from "widgets/Sidebar";
 import { Suspense } from "react";
-import { useTranslation } from "react-i18next";
-
-const Component = () => {
-  const { t, i18n } = useTranslation();
-
-  return <h1>{t("Тест перевод")}</h1>;
-};
 
 const App = () => {
   const { theme, toggleTheme } = useTheme();
@@ -20,7 +13,6 @@ const App = () => {
     <div className={classNames("app", {}, [theme])}>
       <Suspense fallback="">
         <Navbar />
-        <Component />
         <div className="content-page">
           <Sidebar />
           <AppRouter />
