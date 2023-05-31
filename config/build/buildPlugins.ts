@@ -2,6 +2,7 @@ import { BuildOptions, BuildPaths } from "./types/config";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import ReactRefreshPlugin from "@pmmmwh/react-refresh-webpack-plugin";
 
 export function buildPlugins({
   paths,
@@ -19,5 +20,6 @@ export function buildPlugins({
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-  ];
+    isDev && new webpack.HotModuleReplacementPlugin(),
+  ].filter(Boolean);
 }
