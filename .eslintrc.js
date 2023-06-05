@@ -37,7 +37,7 @@ module.exports = {
     'react/button-has-type': 'off',
     'implicit-arrow-linebreak': 'off',
     'linebreak-style': 0,
-    'operator-linebreak': ['error', 'none'],
+    'operator-linebreak': 'off',
     'jsx-quotes': [2, 'prefer-single'],
     'i18next/no-literal-string': [
       'error',
