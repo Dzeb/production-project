@@ -6,6 +6,6 @@ interface LoaderProps {
   className?: string;
 }
 
-export const Loader: FC<LoaderProps> = ({ className }) => {
-  return <div className={classNames('lds-hourglass', {}, [className])}></div>;
-};
+export const Loader: FC<LoaderProps> = ({ className }) => (
+  <div className={classNames('lds-hourglass', {}, [className])} />
+);

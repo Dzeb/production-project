@@ -8,6 +8,7 @@ export function buildPlugins({
   isDev,
 }: BuildOptions): webpack.WebpackPluginInstance[] {
   return [
+    isDev && new webpack.HotModuleReplacementPlugin({ overlay: false }),
     new HtmlWebpackPlugin({
       template: paths.html,
     }),
@@ -19,6 +20,5 @@ export function buildPlugins({
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
     }),
-    isDev && new webpack.HotModuleReplacementPlugin(),
   ].filter(Boolean);
 }
