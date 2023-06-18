@@ -23,11 +23,16 @@ export default {
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
   // The root directory that Jest should scan for tests and modules within
   rootDir: '../../',
+  modulePaths: ['<rootDir>src'],
   // The glob patterns Jest uses to detect test files
   testMatch: [
     // Обнаружил разницу между МАК ОС и ВИНДОУС!!!
     '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
   ],
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+  },
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
