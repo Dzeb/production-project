@@ -34,7 +34,7 @@ class ErrorBoundary extends React.Component<
 
     if (hasError) {
       return (
-        <Suspense fallback={''}>
+        <Suspense fallback=''>
           <PageError />
         </Suspense>
       );
