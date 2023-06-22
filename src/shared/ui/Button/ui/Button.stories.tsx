@@ -1,13 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button } from './Button';
+
+import { Button, ThemeButton } from './Button';
+import 'app/styles/index.scss'
 
 const meta: Meta<typeof Button> = {
   title: 'shared/Button',
   component: Button,
   tags: ['autodocs'],
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 };
 
 export default meta;
@@ -15,27 +14,28 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    primary: true,
-    label: 'Button',
+    children: 'button'
   },
 };
 
-export const Secondary: Story = {
+export const Clear: Story = {
   args: {
-    label: 'Button',
+    children: 'button',
+    theme: ThemeButton.CLEAR
+  },
+  decorators: [(Story) => (
+    <div style={{ margin: '3em', backgroundColor: 'red' }}>
+      {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
+      <Story />
+    </div>
+  ),]
+};
+
+export const Outline: Story = {
+  args: {
+    children: 'button',
+    theme: ThemeButton.OUTLINE
   },
 };
 
-export const Large: Story = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
 
-export const Small: Story = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
-};

@@ -3,3 +3,18 @@
   width: auto;
   padding: 10px;
 }
+
+.clear{
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  background: none;
+}
+
+.outline{
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  padding: 10px;
+  background: none;
+  color: var(--primary-color);
+}
