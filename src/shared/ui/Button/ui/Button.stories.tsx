@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-
 import { Button, ThemeButton } from './Button';
-import 'app/styles/index.scss'
+import 'app/styles/index.scss';
+import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecotator';
+import { Theme } from 'app/providers/ThemeProvider';
 
 const meta: Meta<typeof Button> = {
   title: 'shared/Button',
@@ -14,28 +15,27 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    children: 'button'
+    children: 'button',
   },
 };
 
 export const Clear: Story = {
   args: {
     children: 'button',
-    theme: ThemeButton.CLEAR
+    theme: ThemeButton.CLEAR,
   },
-  decorators: [(Story) => (
-    <div style={{ margin: '3em', backgroundColor: 'red' }}>
-      {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
-      <Story />
-    </div>
-  ),]
 };
 
 export const Outline: Story = {
   args: {
     children: 'button',
-    theme: ThemeButton.OUTLINE
+    theme: ThemeButton.OUTLINE,
   },
 };
 
-
+export const PrimaryDark: Story = {
+  args: {
+    children: 'button',
+  },
+  decorators: [(Story) => ThemeDecorator(Theme.DARK)(Story)],
+};

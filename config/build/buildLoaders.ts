@@ -1,5 +1,4 @@
 import webpack from 'webpack';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/config';
 import { buildCssLoaders } from './loaders/builsCssLoaders';
 
@@ -16,7 +15,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
       },
     ],
   };
-  const cssLoaders = buildCssLoaders(isDev)
+  const cssLoaders = buildCssLoaders(isDev);
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif|woff|woff2)$/i,
