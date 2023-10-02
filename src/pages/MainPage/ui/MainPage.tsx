@@ -1,5 +1,4 @@
 import { BugButton } from 'app/providers/ErrorBoundary';
-import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const MainPage = () => {

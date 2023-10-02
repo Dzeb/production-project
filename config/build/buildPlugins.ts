@@ -18,6 +18,6 @@ export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPlu
       __IS_DEV__: JSON.stringify(isDev),
     }),
     new BundleAnalyzerPlugin({ openAnalyzer: false }),
-    // isDev && new webpack.HotModuleReplacementPlugin({ overlay: false })
+    isDev && new webpack.HotModuleReplacementPlugin({ overlay: false }),
   ].filter(Boolean);
 }

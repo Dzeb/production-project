@@ -8,10 +8,10 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     use: [
       {
         loader: '@svgr/webpack',
-        options: {
-          typescript: true,
-          ext: 'tsx',
-        },
+        // options: {
+        //   typescript: true,
+        //   ext: 'tsx',
+        // },
       },
     ],
   };

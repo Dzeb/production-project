@@ -1,12 +1,12 @@
-import { FC } from 'react';
 import 'app/styles/index.scss';
-import { Theme } from 'app/providers/ThemeProvider';
+import { Theme, ThemeProvider } from 'app/providers/ThemeProvider';
 import { StoryFn } from '@storybook/react';
 
-export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) => {
-  return (
+export const ThemeDecorator = (theme: Theme) => (StoryComponent: StoryFn) =>
+  (
     <div className={`app ${theme}`}>
-      <StoryComponent />
+      <ThemeProvider>
+        <StoryComponent />
+      </ThemeProvider>
     </div>
   );
-};
