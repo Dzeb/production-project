@@ -81,6 +81,7 @@
     "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
+    "17": "^0.0.0",
     "@storybook/preset-scss": "^1.0.3",
     "i18next": "^21.6.11",
     "i18next-browser-languagedetector": "^6.1.3",
