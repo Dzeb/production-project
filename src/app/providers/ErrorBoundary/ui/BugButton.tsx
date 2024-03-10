@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button } from 'shared/ui/Button';
 
 // Компонент для тестирования ErrorBouhdary. Не работатет, скорее всего изза плагина "hotmodulereplacementplugin "
 // который не дает еще один рендер, что бы ErrorBoundary мог отрисовать fallback
 export const BugButton = () => {
   const [error, setError] = useState(false);
-
+  const { t } = useTranslation();
   const onThrow = () => setError(true);
 
   useEffect(() => {
@@ -14,5 +15,5 @@ export const BugButton = () => {
     }
   }, [error]);
 
-  return <Button onClick={onThrow}>Throw error</Button>;
+  return <Button onClick={onThrow}>{t('Throw error')}</Button>;
 };
