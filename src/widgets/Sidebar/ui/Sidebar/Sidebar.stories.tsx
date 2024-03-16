@@ -14,6 +14,7 @@ type Story = StoryObj<typeof Sidebar>;
 
 export const Light: Story = {
   args: {},
+  decorators: [(Story) => ThemeDecorator(Theme.LIGHT)(Story)],
 };
 
 export const Dark: Story = {
