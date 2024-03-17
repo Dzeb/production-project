@@ -13,6 +13,7 @@ export function componentRender(component: ReactNode, options: ComponentRenderOp
   return render(
     <MemoryRouter initialEntries={[route]}>
       <I18nextProvider i18n={i18nForTests}>{component}</I18nextProvider>
+      {/* eslint-disable-next-line comma-dangle */}
     </MemoryRouter>
   );
 }
