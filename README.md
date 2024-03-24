@@ -7,3 +7,7 @@
 ### 30
 
 Redux-toolkit, Redux config, Reselect. Entity creation. Тесты на всех уровнях - для слайсов, селекторов
+
+### 31
+
+Исправляем глобальные стили для Modal и тем
