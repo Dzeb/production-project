@@ -50,6 +50,7 @@ module.exports = {
     'jsx-quotes': [2, 'prefer-single'],
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'error', // Checks effect
+    'no-param-reassign': 'off',
     'i18next/no-literal-string': [
       'error',
       {
