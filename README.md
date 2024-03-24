@@ -11,3 +11,7 @@ Redux-toolkit, Redux config, Reselect. Entity creation. Тесты на всех
 ### 31
 
 Исправляем глобальные стили для Modal и тем
+
+### 32
+
+31.1 Json server. Имитация бэкенда
