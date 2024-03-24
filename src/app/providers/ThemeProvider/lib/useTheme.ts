@@ -13,6 +13,7 @@ export const useTheme = (): useThemeResult => {
 
   const toggleTheme = () => {
     setTheme(newTheme);
+    document.body.className = localStorage.getItem(LOCAL_STORAGE_THEME_KEY);
     localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
   };
 
