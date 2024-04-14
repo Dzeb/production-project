@@ -28,3 +28,8 @@ export const Dark: Story = {
     (Story) => StoreDecorator({ loginForm: { username: 'admin', password: '12345' } })(Story),
   ],
 };
+
+export const AuthNavbar: Story = {
+  args: {},
+  decorators: [(Story) => StoreDecorator({ user: { authData: {} } })(Story)],
+};
