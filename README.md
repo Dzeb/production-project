@@ -18,4 +18,10 @@ Redux-toolkit, Redux config, Reselect. Entity creation. Тесты на всех
 
 ### 32
 
-Добавлнеря первая Feature AuthByUsername, добавлен кастомный Input, обновлено поведение модалки при открытии - теперь модалка монтируется при открытии и размотнируется из Дом при закрытиию + Lazy
+Добавлена первая Feature AuthByUsername, добавлен кастомный Input, обновлено поведение модалки при открытии - теперь модалка монтируется при открытии и размотнируется из Дом при закрытиию + Lazy
+
+### 33, 34
+
+Добавлен Husky.
+
+Добавлена Entity User, в model Feature AuthByUserName добавлена LoginByUserName, StoreProvider для StoryBook . Обновлена LoginForm: добавлен LoginSlice и в NavBar добалвена кнопка "Выйти"

@@ -1,6 +1,6 @@
 import path from 'path';
 import type { StorybookConfig } from '@storybook/react-webpack5';
-import { RuleSetRule } from 'webpack';
+import { DefinePlugin, RuleSetRule } from 'webpack';
 import { BuildPaths } from '../build/types/config';
 import { buildCssLoaders } from '../build/loaders/builsCssLoaders';
 
@@ -24,8 +24,7 @@ const config: StorybookConfig = {
       html: '',
       src: path.resolve(__dirname, '..', '..', 'src'),
     };
-
-    config.resolve?.modules?.push(paths.src);
+    config.resolve?.modules?.unshift(paths.src);
     config.resolve?.extensions?.push('.tsx', '.ts', '.js');
 
     if (config.module?.rules) {
@@ -42,14 +41,16 @@ const config: StorybookConfig = {
       use: [
         {
           loader: '@svgr/webpack',
-          // options: {
-          //   typescript: true,
-          //   ext: 'tsx',
-          // },
         },
       ],
     });
     config.module?.rules?.push(buildCssLoaders(true));
+
+    config.plugins?.push(
+      new DefinePlugin({
+        __IS_DEV__: true,
+      }),
+    );
     return config;
   },
   docs: {
