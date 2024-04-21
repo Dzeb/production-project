@@ -25,3 +25,7 @@ Redux-toolkit, Redux config, Reselect. Entity creation. Тесты на всех
 Добавлен Husky.
 
 Добавлена Entity User, в model Feature AuthByUserName добавлена LoginByUserName, StoreProvider для StoryBook . Обновлена LoginForm: добавлен LoginSlice и в NavBar добалвена кнопка "Выйти"
+
+### 35
+
+Оптимизация, уменьшение бандла, реализация добавления асинхнронных редакс слайсов
