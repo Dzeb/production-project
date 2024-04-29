@@ -32,4 +32,8 @@ Redux-toolkit, Redux config, Reselect. Entity creation. Тесты на всех
 
 ### 36
 
-Тесты селекторов для фичи AuthByUserName
+Тесты селекторов для фичи AuthByUserName, Тесты самой фичи AuthByUserName
+
+### 37
+
+add Profile page, optimisation

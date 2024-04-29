@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Денис",
+    "lastname": "Граур",
+    "age": 30,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Таганрог",
+    "username": "admin",
+    "avatar": "https://smart-lab.ru/uploads/2021/images/02/78/63/2021/07/19/4a31b6.jpg"
+  }
 }
