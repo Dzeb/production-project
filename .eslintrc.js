@@ -52,6 +52,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error', // Checks effect
     'no-param-reassign': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    'no-undef': 'off',
     'i18next/no-literal-string': [
       'error',
       {
@@ -63,7 +64,7 @@ module.exports = {
       'error',
       {
         ignoreComments: true,
-        code: 100,
+        code: 120,
       },
     ],
   },
