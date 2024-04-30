@@ -37,3 +37,7 @@ Redux-toolkit, Redux config, Reselect. Entity creation. Тесты на всех
 ### 37
 
 add Profile page, optimisation
+
+### 38
+
+Создвли instance API, добавили navigate и api в middlevare и в extraThunk , добавили глобальную переменную '**API**',
