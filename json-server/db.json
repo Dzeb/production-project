@@ -28,8 +28,8 @@
   "profile": {
     "first": "Денис",
     "lastname": "Граур",
-    "age": 30,
-    "currency": "RUB",
+    "age": 40,
+    "currency": "USD",
     "country": "Russia",
     "city": "Таганрог",
     "username": "admin",

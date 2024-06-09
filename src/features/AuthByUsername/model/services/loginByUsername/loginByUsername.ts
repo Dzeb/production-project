@@ -21,8 +21,7 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, Thun
 
       localStorage.setItem(USER_LOCALSTORAGE_KEY, JSON.stringify(response.data));
       dispatch(userActions.setAuthData(response.data));
-      // TODO: при переходе по страницам слетает User
-      // dispatch(userActions.initAuthData());
+
       return response.data;
     } catch (e) {
       return rejectWithValue('error');
