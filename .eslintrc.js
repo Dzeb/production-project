@@ -9,6 +9,7 @@ module.exports = {
     'airbnb',
     'plugin:i18next/recommended',
     'plugin:storybook/recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -31,7 +32,6 @@ module.exports = {
     ],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
-    'no-unused-vars': 'warn',
     'react/require-default-props': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-props-no-spreading': 'warn',
@@ -51,7 +51,8 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
     'react-hooks/exhaustive-deps': 'error', // Checks effect
     'no-param-reassign': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'no-undef': 'off',
     'i18next/no-literal-string': [
       'error',
