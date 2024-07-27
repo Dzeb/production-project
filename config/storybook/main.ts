@@ -28,7 +28,6 @@ const config: StorybookConfig = {
     config.resolve?.extensions?.push('.tsx', '.ts', '.js');
 
     if (config.module?.rules) {
-      // eslint-disable-next-line no-param-reassign
       config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
         if (/svg/.test(rule.test as string)) {
           return { ...rule, exclude: /\.svg$/i };
@@ -50,6 +49,7 @@ const config: StorybookConfig = {
       new DefinePlugin({
         __IS_DEV__: JSON.stringify(true),
         __API__: JSON.stringify(''),
+        __PROJECT__: JSON.stringify('storybook'),
       }),
     );
     return config;
