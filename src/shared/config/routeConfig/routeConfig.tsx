@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { AboutPage } from 'pages/AboutPage';
+import { ArticleDetailsPage } from 'pages/ArticleDetailsPage';
+import { ArticlesPage } from 'pages/ArticlesPage';
 import { MainPage } from 'pages/MainPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
 import { ProfilePage } from 'pages/ProfilePage';
@@ -12,14 +14,18 @@ export type AppRoutesProps = RouteProps & {
 export enum AppRoutes {
   MAIN = 'main',
   ABOUT = 'about',
-  NOT_FOUND = 'not_found',
   PROFILE = 'profile',
+  ARTICLES = 'articles',
+  ARTICLE_DETAILS = 'article_details',
+  NOT_FOUND = 'not_found',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.MAIN]: '/',
   [AppRoutes.ABOUT]: '/about',
   [AppRoutes.PROFILE]: '/profile',
+  [AppRoutes.ARTICLES]: '/articles',
+  [AppRoutes.ARTICLE_DETAILS]: '/article/', // + id
   [AppRoutes.NOT_FOUND]: '*',
 };
 
@@ -36,6 +42,14 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
     path: RoutePath.profile,
     element: <ProfilePage />,
     authOnly: true,
+  },
+  [AppRoutes.ARTICLES]: {
+    path: RoutePath.articles,
+    element: <ArticlesPage />,
+  },
+  [AppRoutes.ARTICLE_DETAILS]: {
+    path: `${RoutePath.article_details}:id`,
+    element: <ArticleDetailsPage />,
   },
   [AppRoutes.NOT_FOUND]: {
     path: RoutePath.not_found,
