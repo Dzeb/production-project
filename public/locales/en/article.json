@@ -1,4 +1,6 @@
 {
   "Артикли": "Articles",
-  "Артикль": "Article details"
+  "Артикль": "Article details",
+  "Статья не найдена": "Article not found",
+  "Произошла ошибка при загрузке статьи": "An error occurred while uploading the article"
 }
