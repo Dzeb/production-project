@@ -22,5 +22,5 @@
   },
   "peacock.color": "#ff3d00",
   "diffEditor.wordWrap": "on",
-  "cSpell.words": ["LOCALSTORAGE", "testid"]
+  "cSpell.words": ["LOCALSTORAGE", "testid", "Заголовок"]
 }
